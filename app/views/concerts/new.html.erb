@@ -1,0 +1,28 @@
+<%= form_for [@concert] do |f| %>
+<h1>Insert your new concert!</h1>
+
+  <%= f.label :band %>
+  <%= f.text_field :band %>
+  <br>
+  <%= f.label :venue %>
+  <%= f.text_field :venue %>
+  <br>
+  <%= f.label :date %>
+  <%= f.date_field :date %>
+  <br>
+  <%= f.label :city %>
+  <%= f.text_field :city %>
+  <br>
+  <%= f.label :price %>
+  <%= f.text_field :price %>
+  <br>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <br>
+  <%= f.submit "Create Concert" %>
+
+<% end %>
+<br>
+<footer>
+    <h5>Property of ManuCorp</h5>
+</footer>

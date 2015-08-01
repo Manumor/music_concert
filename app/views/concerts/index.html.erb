@@ -1,0 +1,12 @@
+<h3>Concerts:</h3>
+<ul>
+  <% @concert.each do |concert| %>
+   <li> 
+    <%= link_to concert.band, concert_path(concert) %>
+   </li>
+    <% end %>
+</ul>
+<br>
+<footer>
+    <h5>Property of ManuCorp</h5>
+</footer>
