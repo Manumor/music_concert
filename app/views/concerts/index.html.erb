@@ -1,11 +1,24 @@
-<h3>Concerts:</h3>
-<ul>
+  <h3>Concerts today:</h3>
+  <% @concert_today.each do |concert| %>
+		<ul>
+   			<li> 
+    			<%= link_to concert.band, concert_path(concert) %>
+   			</li>
+ 		</ul>
+  <% end %>
+
+  <h3>Coming up:</h3>
   <% @concert.each do |concert| %>
-   <li> 
-    <%= link_to concert.band, concert_path(concert) %>
-   </li>
+  	<% if concert.date != Date.today %>
+ 	<ul>
+   		<li> 
+    		<%= link_to concert.band, concert_path(concert) %>
+   		</li>
+   	</ul>
+   	<% else  %>
     <% end %>
-</ul>
+   <% end %>
+ 
 <br>
 <footer>
     <h5>Property of ManuCorp</h5>
